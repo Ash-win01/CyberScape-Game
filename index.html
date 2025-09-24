@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberscape</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="gameMap"></canvas>
+    
+    <button id="pause">Pause</button>
+    <button id="resume">Resume</button>
+    <button id="reset">Reset</button>
+
+    <div id="infoBoard">
+        <div class="phealth">
+            <div id="phealname"> Player Health: </div>
+            <div id="phealthvalue">100 %</div>
+        </div>
+        <div class="sysHealth">
+            <div id="syshealname"> System Health: </div>
+            <div id="syshealthvalue">80</div>
+        </div>
+        <div class="keys">
+            <div id="keysname"> Keys: </div>
+            <div id="keyvalue">10</div>
+        </div>
+        <div class="datashard">
+            <div id="dsname"> Shards Delivered: </div>
+            <div id="dsvalue">0</div>
+        </div>
+        <div class="score">
+            <div id="scorename"> High Score: </div>
+            <div id="scoreValue">0 </div>
+        </div>
+    </div>
+
+    <div id="leadBd">
+        <button id="lBoardbutt">LeaderBoard</button>
+    </div>
+
+    <div id="cHub">
+        <div id="availShards">
+            <div id="shardsname">Data Shards Available: </div>
+            <div id="shardsValue">
+                <button id="shard1">10</button>
+                <button id="shard2">10</button>
+                <button id="shard3">10</button>
+                <button id="shard4">10</button>
+                <button id="shard5">10</button>
+                <button id="shard6">10</button>
+            </div>
+            <div id="closebt">
+                <button id="closeButt">Close</button>
+            </div>
+        </div>
+        <div id="colKeys">
+            <div id="keyname">Keys Available: </div>
+            <div id="keycolValue">0</div>
+        </div>
+        <div id="decrypt">Click on the Data Shard you wish to Decrypt! </div>
+        <div id="choiceline">Click Yes to Decrypt the chosen Data Shard</div>
+            <div id="choices">
+            <button id="yeschoice">Yes</button>
+            <button id="noChoice">No</button>
+            </div>
+        
+        <div id="pCont">
+            <div id="pBar"></div>
+        </div>
+        <div id="stateline"></div>
+        <div id="noteInfo">Decrypt to save System Health ! </div>
+    </div>
+    <div id="baseStation">
+        <div id="shardsCollect">
+            <div id="sdsname">Data Shards Decrypted: </div>
+            <div id="sdsValue">
+                <div id="sd1">5</div>
+                <div id="sd2">5</div>
+                <div id="sd3">5</div>
+                <div id="sd4">5</div>
+                <div id="sd5">5</div>
+                <div id="sd6">5</div>
+            </div>
+            <div id="closebt2">
+                <button id="closeButt2">Close</button>
+            </div>
+    </div>
+       <div class="sysHealthBox">
+            <div id="syshealnameBox"> System Health: </div>
+            <div id="syshealthvalueBox">65 %</div>
+        </div>
+        <div id="transport">Transport the Data Shards.. </div>
+            <div id="choices2">
+            <button id="clickchoice">Click here</button>
+            </div>
+        
+        <div id="pCont2">
+            <div id="pBar2"></div>
+        </div>
+        <div id="stateline2"></div>
+        <div id="noteInfo2">Transport more shards to save Aurex! </div>
+    </div>
+
+    <div id = "market">
+        <div id="marHead">
+        <div id="titleMarket">Market Place</div>
+        <div id="closebt3">
+                <button id="closeButt3">Close</button>
+            </div>
+        </div>
+        <div id="colShards">
+            <div id="shardname">Data Shards Available: </div>
+            <div id="shardcolValue">0</div>
+        </div>
+        <div id="markall">
+        <div id="mark1">
+            
+                <div id="it1Cont">
+                    <div id="it1det">
+                        <div id="it1Img">
+                          <img src="rifle.jpg" width="45">
+                        </div>
+                    <div id="it1name">
+                <div id="it1title">Rifles </div> 
+                <div id="it1Have"> You have: 0 </div>
+                    </div>
+                    </div>
+                <div id="it1des"> Medium-range weapon with decent firepower. Reliable and effective.</div>
+                </div>
+                <div id="it1button">
+                    <div id="it1price">
+                        <div id="it1val">10</div>
+                        <div id="it1ds"></div>
+                    </div>
+                <button id="it1buy">Buy</button></div>
+            
+        </div>
+
+        <div id="mark2">
+            
+                <div id="it2Cont">
+                    <div id="it2det">
+                        <div id="it2Img">
+                          <img src="gun.jpg" width="75">
+                        </div>
+                    <div id="it2name">
+                <div id="it2title">Gun </div> 
+                <div id="it2Have"> You have: 0 </div>
+                    </div>
+                    </div>
+                <div id="it2des"> Quick and compact. Ideal for close-range takedowns.</div>
+                </div>
+                <div id="it2button">
+                     <div id="it2price">
+                        <div id="it2val">10</div>
+                        <div id="it2ds"></div>
+                    </div>
+                <button id="it2buy">Buy</button></div>
+            
+        </div>
+
+        <div id="mark3">
+            
+                <div id="it3Cont">
+                    <div id="it3det">
+                        <div id="it3Img">
+                          <img src="fire.jpg" width="50">
+                        </div>
+                    <div id="it3name">
+                <div id="it3title">Speed Upgrade </div> 
+                <div id="it3Have"> You have: 0 </div>
+                    </div>
+                    </div>
+                <div id="it3des"> Boost your movement speed for a short time. Outrun danger!</div>
+                </div>
+                <div id="it3button">
+                     <div id="it3price">
+                        <div id="it3val">10</div>
+                        <div id="it3ds"></div>
+                    </div>
+                <button id="it3buy">Buy</button></div>
+            
+        </div>
+
+        <div id="mark4">
+            
+                <div id="it4Cont">
+                    <div id="it4det">
+                        <div id="it4Img">
+                          <img src="health.png" width="55">
+                        </div>
+                    <div id="it4name">
+                <div id="it4title">Health Shield </div> 
+                <div id="it4Have"> You have: 0 </div>
+                    </div>
+                    </div>
+                <div id="it4des"> Protect yourself from incoming damage. Activates on hit.</div>
+                </div>
+                <div id="it4button">
+                     <div id="it4price">
+                        <div id="it4val">10</div>
+                        <div id="it4ds"></div>
+                    </div>
+                <button id="it4buy">Buy</button></div>
+            
+        </div>
+
+        <div id="mark5">
+            
+                <div id="it5Cont">
+                    <div id="it5det">
+                        <div id="it5Img">
+                          <img src="datamine.jpg" width="55">
+                        </div>
+                    <div id="it5name">
+                <div id="it5title">Data Mine </div> 
+                <div id="it5Have"> You have: 0 </div>
+                    </div>
+                    </div>
+                <div id="it5des"> Place on the map to automatically generate Data Shards overtime </div>
+                </div>
+                <div id="it5button">
+                     <div id="it5price">
+                        <div id="it5val">10</div>
+                        <div id="it5ds"></div>
+                    </div>
+                <button id="it5buy">Buy</button></div>
+            
+        </div>
+
+        <div id="mark6">
+            
+                <div id="it6Cont">
+                    <div id="it6det">
+                        <div id="it6Img">
+                          <img src="teleport.jpg" width="55">
+                        </div>
+                    <div id="it6name">
+                <div id="it6title">Teleport Hubs </div> 
+                <div id="it6Have"> You have: 0 </div>
+                    </div>
+                    </div>
+                <div id="it6des">  Players can instantly travel between these hubs.</div>
+                </div>
+                <div id="it6button">
+                     <div id="it6price">
+                        <div id="it6val">10</div>
+                        <div id="it6ds"></div>
+                    </div>
+                <button id="it6buy">Buy</button></div>
+            
+        </div>
+        
+        </div>
+    </div>
+    
+    <div id="lBoard">
+        <div id="lbHead">
+        <div id="lbName">LeaderBoard</div>
+        <div id="closebt4">
+                <button id="closeButt4">Close</button>
+            </div>
+        </div>
+        <div id="lbTable">
+            <table id="lboardTable">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+              <tbody id="lbBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="HealthBoost">
+        <button id="Star">
+            <img src="star.jpg" width="30">
+            <div id="starVal"> 0 </div>
+        </button>
+    </div>
+
+    <div id="HealthBoost2">
+        <button id="heart">
+            <img src="heart.jpg" width="55">
+            <div id="heartVal"> 0 </div>
+        </button>
+    </div>
+    
+    <div id="dataHub">
+        <div id="deavailShards">
+            <div id="deshardsname">Data Shards Decrypted: </div>
+            <div id="deshardsValue">
+                <button id="deshard1">10</button>
+                <button id="deshard2">10</button>
+                <button id="deshard3">10</button>
+                <button id="deshard4">10</button>
+                <button id="deshard5">10</button>
+                <button id="deshard6">10</button>
+            </div>
+            <div id="closebt5">
+                <button id="closeButt5">Close</button>
+            </div>
+        </div>
+        <div id="collect">Click on the Data Shard you wish to Collect! </div>
+        <div id="choiceline2">Click Yes to collect the chosen Data Shard</div>
+            <div id="choices3">
+            <button id="yeschoice3">Yes</button>
+            <button id="noChoice3">No</button>
+            </div>
+        
+        <div id="pCont3">
+            <div id="pBar3"></div>
+        </div>
+        <div id="stateline3"></div>
+        <div id="noteInfo3">Decrypt to save System Health ! </div>
+    </div>
+
+    <div id="TeleHub">
+        <div id="teavailShards">
+            <div id="teshardsname">Teleport Hubs Available: </div>
+            <div id="teshardsValue">
+                <button id="teshard1">1</button>
+                <button id="teshard2">2</button>
+                <button id="teshard3">3</button>
+                <button id="teshard4">4</button>
+                <button id="teshard5">5</button>
+                <button id="teshard6">6</button>
+            </div>
+            <div id="closebt6">
+                <button id="closeButt6">Close</button>
+            </div>
+        </div>
+        <div id="teleport">Click on the Hub you wish to Teleport! </div>
+        <div id="choiceline4">Click Yes to teleport to the chosen Hub</div>
+            <div id="choices4">
+            <button id="yeschoice4">Yes</button>
+            <button id="noChoice4">No</button>
+            </div>
+        
+        <div id="pCont4">
+            <div id="pBar4"></div>
+        </div>
+        <div id="stateline4"></div>
+        <div id="noteInfo4">Save Aurex! </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

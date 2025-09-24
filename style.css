@@ -1,0 +1,458 @@
+* {
+    background-color: grey;
+    margin: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+#gameMap {
+    
+    border: 4px solid white;
+    background-color: black;
+    display: block;
+    position: absolute;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+#pause, #resume, #reset, #lBoardbutt, #Star, #heart {
+    position: absolute;
+    height: 40px;
+    
+    font-size: 18px;
+    background-color: rgb(52, 51, 51);
+    color: rgb(106, 205, 241);
+    border-radius: 10px;
+}
+
+#Star, #heart {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+#starVal, #heartVal {
+    background-color: transparent;
+}
+#infoBoard {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 150px;
+    width: 250px;
+    background-color: transparent;
+    border-color: aqua;
+    background-color: rgba(52, 51, 51, 0.7);
+    border-style: solid;
+    padding-top: 5px;
+}
+
+#leadBd {
+    position: absolute;
+    top: 20px;
+    right: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 50px;
+    width: 100px;
+    background-color: transparent;
+    padding-top: 5px;
+}
+
+#HealthBoost {
+    position: absolute;
+    top: 25px;
+    right: 200px;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    width: 80px;
+    background-color: transparent;
+}
+
+#HealthBoost2 {
+    position: absolute;
+    top: 25px;
+    right: 320px;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    width: 80px;
+    background-color: transparent;
+}
+
+
+
+#cHub, #baseStation, #market, #lBoard, #dataHub, #TeleHub {
+    padding-left: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 180px;
+    left: 400px;
+    height: 400px;
+    width: 700px;
+    border-color: aqua;
+    background-color: rgba(52, 51, 51, 0.7);
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+#market, #lBoard {
+    align-items: center;
+    gap: 15px;
+}
+
+table {
+    background: transparent;
+    border-color: white;
+}
+
+th {
+    background-color: rgb(210, 239, 22);
+    height: 30px;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 18px;
+
+}
+td {
+    background-color: rgb(33, 15, 122);
+    height: 30px;
+    text-align: center;
+    color: white;
+}
+
+#mark1, #mark2, #mark3, #mark4, #mark5, #mark6 {
+    height: 100px;
+    width: 450px;
+    padding: 8px;
+    border-radius: 10px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background-color: rgba(49, 44, 140, 0.7);
+}
+
+#titleMarket, #lbName {
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: transparent;
+    color: rgb(242, 58, 58);
+    font-weight: bolder;
+}
+
+#lbTable {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 500px;
+    height: 500px;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    
+}
+
+#availShards, #deavailShards, #teavailShards,  #colKeys, #colShards, #shardsCollect, .sysHealthBox {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    background: transparent;
+    gap: 30px;
+}
+
+#markall {
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    background: transparent;
+    overflow-y: auto;
+}
+
+#it1buy, #it2buy, #it3buy, #it4buy, #it5buy, #it6buy {
+    position: relative;
+    height: 40px;
+    width: 60px;
+    background-color: green;
+    color: white;
+    top: 25px;
+    right: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#it1Img, #it2Img, #it3Img, #it4Img, #it5Img, #it6Img {
+    background: transparent;
+}
+
+#it1title, #it2title, #it3title, #it4title, #it5title, #it6title {
+    font-size: 30px;
+    color: yellow;
+    background-color: transparent;
+}
+
+#it1Have, #it2Have, #it3Have, #it4Have, #it5Have, #it6Have {
+    background: transparent;
+    color: white;
+    font-size: 18px;
+}
+
+#it1Cont, #it2Cont, #it3Cont, #it4Cont, #it5Cont, #it6Cont {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background: transparent;
+}
+
+#it1name, #it2name, #it3name, #it4name, #it5name, #it6name {
+    background: transparent;
+    
+}
+
+#it1det, #it2det, #it3det, #it4det, #it5det, #it6det {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    background: transparent;
+}
+
+#it1button, #it2button, #it3button, #it4button, #it5button, #it6button {
+    background: transparent;
+}
+
+#it1des, #it2des, #it3des, #it4des, #it5des, #it6des {
+    position: relative;
+    left: 10px;
+    font-size: 21px;
+    color: white;
+    background: transparent;
+}
+
+#it1ds, #it2ds, #it3ds, #it4ds, #it5ds, #it6ds {
+    background-color: rgb(152, 42, 220);
+}
+
+#it1price, #it2price, #it3price, #it4price, #it5price, #it6price {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    font-size: 20px;
+    position: relative;
+    right: 15px;
+}
+
+#it1val, #it2val, #it3val, #it4val, #it5val, #it6val {
+    font-size: 25px;
+    color: white;
+    background-color: transparent;
+}
+
+#marHead, #lbHead {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+}
+
+#shardsname, #deshardsname, #teshardsname, #keyname, #shardname, #decrypt, #collect, #teleport, #choiceline, #choiceline2, #choiceline4, #choiceline3 #stateline, #stateline3, #stateline4,   #noteInfo, #noteInfo4,  #sdsname, #syshealnameBox, #transport, #stateline2, #noteInfo2, #noteInfo3 {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    height: 50px;
+    font-size: 24px;
+    background: transparent;
+    color: rgb(106, 205, 241);
+}
+
+#closebt, #closebt2, #closebt3, #closebt4, #closebt5, #closebt6
+{
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    background: transparent;
+    margin-left: 50px;
+}
+
+#noteInfo, #noteInfo2, #noteInfo3, #noteInfo4 {
+    text-align: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: center;
+    margin-top: 20px;
+    color: yellow;
+}
+
+#choiceline, #choiceline2, #choiceline4, #choiceline3,  #decrypt, #collect, #teleport, #stateline, #transport, #stateline2, #stateline3, #stateline4{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#shardsValue, #deshardsValue, #teshardsValue,  #choices, #sdsValue, #syshealthvalueBox, #choices2, #choices3, #choices4 {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    background: transparent;
+}
+#syshealthvalueBox {
+    color:rgb(106, 205, 241);
+}
+
+#choices, #choices2, #choices3, #choices4 {
+    align-items: center;
+    justify-content: center;
+}
+
+#yeschoice, #noChoice, #yeschoice3, #noChoice3, #yeschoice4, #noChoice4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+    border-color: aqua;
+    border-radius: 20%;
+    border-style: solid;
+    height: 25px;
+    width: 50px;
+}
+
+#clickchoice {
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+    border-color: aqua;
+    border-radius: 20%;
+    border-style: solid;
+    height: 50px;
+    width: 90px;
+}
+
+#closeButt, #closeButt2, #closeButt3, #closeButt4, #closeButt5, #closeButt6 {
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+    border-color: black;
+    border-radius: 20%;
+    border-style: solid;
+    height: 25px;
+    width: 70px;
+    color: white;
+    background-color: rgb(158, 12, 12);
+}
+#shard1, #shard2, #shard3, #shard4, #shard5, #shard6,  #it1ds, #it2ds, #it3ds, #it4ds, #it5ds, #it6ds, #keycolValue, #shardcolValue{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+    border-color: aqua;
+    border-radius: 20%;
+    border-style: solid;
+    height: 25px;
+    width: 25px;
+}
+
+#sd1, #sd2, #sd3, #sd4, #sd5, #sd6, #teshard1, #teshard2, #teshard3, #teshard4, #teshard5, #teshard6, #deshard1, #deshard2, #deshard3, #deshard4, #deshard5, #deshard6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+    border-color: aqua;
+    border-radius: 20%;
+    border-style: solid;
+    height: 25px;
+    width: 25px;
+    display: none;
+}
+
+.phealth, .sysHealth, .keys, .datashard, .score {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background: transparent;
+    color: rgb(106, 205, 241);
+}
+
+#pCont, #pCont2, #pCont3, #pCont4 {
+    width: 100%;
+    height: 25px;
+    background: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pBar, #pBar2, #pBar3, #pBar4 {
+    height: 100%;
+    width: 0%;
+    text-align: center;
+    background-color: rgb(106, 205, 241);
+}
+
+#pause {
+    top: 620px;
+    left: 650px;
+    width: 70px;
+}
+
+#resume {
+    top: 620px;
+    left: 750px;
+    width: 80px;
+}
+
+#reset {
+    top: 620px;
+    left: 850px;
+    width: 70px;
+}
+
+#phealname, #syshealname, #keysname, #dsname, #scorename {
+    background-color: transparent;
+    font-size: 20px;
+}
+
+#phealthvalue,  #keyvalue, #dsvalue,  #syshealthvalueBox, #scoreValue {
+    background-color: transparent;
+    font-size: 20px;
+}
+
+#syshealthvalue {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    border-color: black;
+    border-radius: 2px;
+    border-style: solid;
+    background-color: rgb(54, 222, 54);
+    color: black;
+}
+
